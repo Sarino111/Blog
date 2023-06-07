@@ -1,0 +1,22 @@
+# Turn on URL rewriting
+# Najskor povolime prepisovanie adries
+RewriteEngine On
+
+# Instalation directory
+# Potom nastavime v akom adresary sa nachadza nasa apka
+RewriteBase /blog2/
+
+# Protect application and system files from being viewed
+# Vsetko co je v tomto adresary tak user nema pristup
+# Mozem ich dat aj viac napr. (_inc|admin|system)
+RewriteRule ^(_inc) - [F,L]
+
+# Allow any files or directories that exist to be displayd viewed
+# Ak linkujeme na niaky konkretny adresar alebo subor tak sa otvori ten
+# Iba ak tento adresar nefunguje tak sa ide na RewriteRule
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Rewrite all other URLS to index.php/
+# Vsetko co sa nachadza za rewriteBase v adrese aby to prispendlil za inde.php subor
+RewriteRule .* index.php/$0 [PT,L]

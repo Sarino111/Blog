@@ -1,0 +1,41 @@
+
+
+main {
+    background-color: rgb(83, 82, 80);
+    max-width: 950px;
+    margin: 30px auto;
+    padding: 17px 17px 20px 17px;
+    border-top-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+
+
+.box-heading {
+    padding-top: 15px;
+}
+
+.date {
+    font-size: medium;
+    margin-left: 10px;
+}
+
+.post-header {
+    text-decoration: none;
+}
+
+.title {
+    position: relative;
+
+}
+
+.post_img {
+    max-width: 916px;  /* 950 - 17 -17 = 916 */
+    max-height: 300px;
+    overflow: hidden;
+}
+
+.image {
+    position: relative;
+    top: -280px;
+}
